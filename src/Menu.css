@@ -1,0 +1,135 @@
+
+.menu {
+    position: absolute;
+    top:5%;
+    min-width: 346px;
+    max-height: 90vh;
+    min-height: 78vh;
+    max-width: 20vw;
+    padding: 1rem;
+    z-index: 3000;
+    /* background-color: black; */
+    box-shadow: 10px 0px 50px 5px rgba(0, 0, 0, 0.5) ;
+    /* border-radius: 2rem; */
+    /* color: white;  */
+    background-color: white;
+    overflow-y: auto;
+    /* scrollbar-gutter: stable; */
+    opacity: 0;
+    padding-block-end: 10%;
+    scroll-padding: 0;
+    scrollbar-width: thin;
+    /* padding-block-end: 10%; */
+}
+
+.menu.show {
+    display: block;
+    animation: slideIn 0.7s ease-out both;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.menu.hide {
+    display: none; 
+
+    animation: slideOut 10s ease-out both;
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* svg:nth-of-type(n+2) {
+    position: absolute;
+    right:0;
+    
+} */
+/* .subItem.show {
+    display: grid
+} */
+
+.lastItem.show, .subItem.show {
+   display: block; 
+   margin-left: 5rem;
+   padding-top: 2rem;
+   /* padding: "10px 10px"; */
+}
+
+.lastItem.show {
+    /* background-color: rgba(21, 19, 19, 0.1); */
+    /* background: linear-gradient(to right,rgba(64, 64, 64) , rgba(21, 19, 19, 0)); */
+    /* color: white; */
+    /* padding: 10px 10px; */
+    /* margin-bottom: 10px;   */
+    /* border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem; */
+    text-align: start;
+    animation: slideIn 0.2s ease-out;
+
+}
+
+/* const transparentColor = 'rgba(64, 64, 64, 0)'
+const stickMenuGradient = `linear-gradient(
+  to top,
+  ${COLORS.DARK_GRAY} 65%,
+  ${transparentColor} 
+)` */
+
+.lastItem.hide, .subItem.hide {
+    display: none;
+}
+
+li.subItem.show:hover {
+    color: rgba(21, 19, 19, 0.5)
+
+}
+p.lastItem.show:hover {
+    color: rgba(21, 19, 19, 0.5)
+}
+
+
+.dots {
+    height: 2px;
+    display: flex;
+    flex:3;
+    background-image: linear-gradient(
+        to right,
+        #0876e5 33%,
+        rgba(229, 28, 28, 0) 100%
+      );
+    background-size: 40px;
+}
+
+.dots2 {
+    transform: rotate(90deg) translateX(350px);
+    border-radius: 2rem;
+    height: 10px;
+    display: flex;
+    flex:4;
+    background-image: linear-gradient(
+        to right,
+        #0876e5 33%,
+        rgba(229, 28, 28, 0) 100%
+      );
+    background-size: 200px;
+}
+
+.mainDots {
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+
+

@@ -1,0 +1,18 @@
+.imgCSS {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: background-size 0.3s ease;
+    background-size: 100%;
+}
+
+
+.imgCSS:hover{
+    background-size: 150%;
+}

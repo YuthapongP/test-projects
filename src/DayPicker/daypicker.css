@@ -1,0 +1,20 @@
+.rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+    background-color: rgb(239, 226, 154,.5);
+  }
+
+  .dateString {
+    width: 200px;
+    padding: 2rem 2rem;
+    margin-bottom: 5px;
+    
+  }
+
+.selected-container {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    
+    /* flex: 1 1 calc(33.333% - 10px); 
+  max-width: calc(33.333% - 10px); */
+    /* width: 100vw; */
+}

@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Introduction to React",
+      "content": "React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called 'components'."
+    },
+    {
+      "id": 2,
+      "title": "Getting Started with Next.js",
+      "content": "Next.js provides a minimalistic framework for server-rendered React applications as well as statically exported React apps. This makes it easier to start building a new single-page application with React."
+    },
+    {
+      "id": 3,
+      "title": "Understanding Async/Await in JavaScript",
+      "content": "Async/Await makes it easier to work with asynchronous promises. It allows you to use more traditional syntax for asynchronous code and helps avoid callback hell."
+    },
+    {
+      "id": 4,
+      "title": "Exploring Data Fetching in Next.js",
+      "content": "Next.js offers several data fetching methods for pre-rendering pages: getStaticProps, getStaticPaths, and getServerSideProps. Understanding these can significantly improve your Next.js app's performance."
+    },
+    {
+      "id": 5,
+      "title": "Styling in React: Best Practices",
+      "content": "Styling in React can be accomplished in various ways. Each method has its pros and cons, including plain CSS, pre-processors like SASS, CSS-in-JS libraries like styled-components, and CSS Modules."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+.draggable-box {
+    display: block;
+    align-items: center;
+    svg {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.3s ease;
+      }
+      
+      svg:hover {
+        transform: scale(1.2); 
+      }
+      
+}
+
+.social-login * {
+  border-radius: 50%;
+  border-color: transparent;
+  transition: transform 0.3s ease, opacity 4s ease;
+
+}
+
+.social-login *:hover {
+  transform: scale(1.1); 
+  opacity: 1;
+
+}
+
