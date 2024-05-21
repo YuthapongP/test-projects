@@ -7,7 +7,7 @@ import {
   signInWithCredential,
   signInWithRedirect,
   signOut,
-  //   getRedirectResult
+  //   getRedirectResult 
 } from "firebase/auth";
 import { _auth } from "./firebase-config";
 import { Avatar, Button } from "@chakra-ui/react";

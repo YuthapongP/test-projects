@@ -1,4 +1,4 @@
-import { useRef, lazy, useState, Suspense, useEffect } from "react";
+import { useRef, lazy, useState, Suspense, useEffect, useContext } from "react";
 import "./i18n";
 import { SwiperSlide } from "swiper/react";
 import LuckyAlphabet from "nicky-package6";
@@ -37,6 +37,7 @@ import img6 from "/img/saad-chaudhry-cYpqYxGeqts-unsplash.jpg";
 import img7 from "/img/alexandra-gorn-52jG7-FN22Y-unsplash.jpg";
 import img8 from "/img/faiz-mohomed-8mYOlmdaOsc-unsplash.jpg";
 import img9 from "/img/pete-alexopoulos-XyVQW6VcEs8-unsplash.jpg";
+import { ModalContext } from "./hooks/ModalProvider.tsx";
 import Hallows from "./Hallows";
 import PaddingTest from "./PaddingTest";
 import DisplayTest from "./DisplayTest";
@@ -64,6 +65,9 @@ import { Itinerary } from "nicky-package7";
 import DayPicker from "./DayPicker/DayPicker.tsx";
 import DayPickerMultiple from "./DayPicker/DayPickerMultiple.tsx";
 import DayPickerRange from "./DayPicker/DayPickerRange.tsx";
+import CookiesAcceptance from "./CookiesAcceptance.tsx";
+import TestContext from "./hooks/TestContext.tsx";
+import TestFormWatchValue from "./TestFormWatchValue.tsx";
 
 const allImg = [
   img1,
@@ -87,6 +91,7 @@ const allImg2 = allImg.reverse();
 function App() {
   const { scrollHeight, clientHeight, scrollTop } = document.documentElement;
   const scrollPosition = window.scrollY;
+  const context = useContext(ModalContext);
   console.log(scrollHeight, "scrollHeight");
   console.log(clientHeight, "clientHeight");
   console.log("scrollTop", scrollTop);
@@ -226,7 +231,11 @@ function App() {
       {/* <Itinerary day={6} month={4}></Itinerary> */}
       {/* <DayPicker></DayPicker> */}
       {/* <DayPickerMultiple></DayPickerMultiple> */}
-      <DayPickerRange></DayPickerRange>
+      {/* <DayPickerRange></DayPickerRange> */}
+      {/* <CookiesAcceptance></CookiesAcceptance> */}
+      {/* <TestContext></TestContext> */}
+      {/* <div>{context.numState}</div> */}
+      <TestFormWatchValue></TestFormWatchValue>
     </>
   );
 }
