@@ -68,6 +68,11 @@ import DayPickerRange from "./DayPicker/DayPickerRange.tsx";
 import CookiesAcceptance from "./CookiesAcceptance.tsx";
 import TestContext from "./hooks/TestContext.tsx";
 import TestFormWatchValue from "./TestFormWatchValue.tsx";
+import ReducerComponent from "./Reducer/ReducerComponent.tsx";
+import MapData from "./MapData/MapData.tsx";
+import _ from "lodash";
+import MovingObject from "./MovingObject/MovingObject.tsx";
+import CreateMockup from "./CreateMockup/index.tsx";
 
 const allImg = [
   img1,
@@ -98,6 +103,15 @@ function App() {
   console.log("scrollPosition", scrollPosition);
 
   const [isOpen, setIsOpen] = useState<boolean>(true);
+
+  function removeAccents(str) {
+    return _.deburr(str);
+  }
+
+  // Example usage:
+  const stringWithAccents = "cliché café mañana"; // Input string with accents
+  const stringWithoutAccents = removeAccents(stringWithAccents);
+  console.log(stringWithoutAccents);
   // const ref = useRef<HTMLInputElement>(null);
   // const [data, setData] = useState<string>("");
   // const [newData, setNewData] = useState<string>("");
@@ -235,7 +249,11 @@ function App() {
       {/* <CookiesAcceptance></CookiesAcceptance> */}
       {/* <TestContext></TestContext> */}
       {/* <div>{context.numState}</div> */}
-      <TestFormWatchValue></TestFormWatchValue>
+      {/* <ReducerComponent /> */}
+      {/* <TestFormWatchValue></TestFormWatchValue> */}
+      {/* <MapData></MapData> */}
+      {/* <MovingObject /> */}
+      <CreateMockup></CreateMockup>
     </>
   );
 }

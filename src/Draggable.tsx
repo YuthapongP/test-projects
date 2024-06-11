@@ -139,14 +139,14 @@ export default function Draggable(props: CalendarProps) {
         const newY = event.clientY - initialPos.current.y;
         setPos({ x: newX, y: newY });
 
-        console.log("event.clientX", event.clientX);
-        console.log("event.clientY", event.clientY);
+        // console.log("event.clientX", event.clientX);
+        // console.log("event.clientY", event.clientY);
 
-        console.log("initialPos.current.x", initialPos.current.x);
-        console.log("initialPos.current.y", initialPos.current.y);
+        // console.log("initialPos.current.x", initialPos.current.x);
+        // console.log("initialPos.current.y", initialPos.current.y);
 
-        console.log("newX", newX);
-        console.log("newY", newY);
+        // console.log("newX", newX);
+        // console.log("newY", newY);
       }
     };
 

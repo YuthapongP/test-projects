@@ -42,6 +42,9 @@ export default function TestFormWatchValue() {
     )
   );
 
+  const a = 2;
+  console.log(a);
+
   const methods = useForm({
     resolver: yupResolver(allFieldSchema),
     mode: "onBlur",
@@ -56,8 +59,6 @@ export default function TestFormWatchValue() {
   const watchAll = watch();
 
   console.log(allFields, "allFields");
-
-  console.log(errors);
 
   //   const {
   //     control,

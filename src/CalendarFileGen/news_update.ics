@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//sebbo.net//ical-generator//EN
+NAME:My Calendar
+X-WR-CALNAME:My Calendar
+BEGIN:VEVENT
+UID:7ef963ee-531a-4d3e-ae31-d7fae2ef2c5a
+SEQUENCE:0
+DTSTAMP:20240606T063154Z
+DTSTART:20240101T020000Z
+DTEND:20240101T030000Z
+SUMMARY:News Update Event
+LOCATION:Online | Offline
+DESCRIPTION:Local journalists told the BBC that an Israeli warplane fired 
+ two missiles at classrooms on the top floor of the school in the Nuseirat 
+ refugee camp.
+END:VEVENT
+END:VCALENDAR

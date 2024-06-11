@@ -39,7 +39,7 @@ const ProgressStyles = styled.div<ProgressStylesProps>`
       height: 1px;
       width: 30px;
       background-color: pink;
-  }
+    }
     .progress-percentage {
       background-color: white;
       text-align: center;
