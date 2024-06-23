@@ -73,6 +73,10 @@ import MapData from "./MapData/MapData.tsx";
 import _ from "lodash";
 import MovingObject from "./MovingObject/MovingObject.tsx";
 import CreateMockup from "./CreateMockup/index.tsx";
+import ReadImg from "./ReadImg/ReadImg.tsx";
+import FormEvent from "./FormEvent/FormEvent.tsx";
+import DragDrop from "./DragDrop/DragDrop.tsx";
+import ReadAsText from "./ReadAsText/ReadAsText.tsx";
 
 const allImg = [
   img1,
@@ -253,7 +257,11 @@ function App() {
       {/* <TestFormWatchValue></TestFormWatchValue> */}
       {/* <MapData></MapData> */}
       {/* <MovingObject /> */}
-      <CreateMockup></CreateMockup>
+      {/* <CreateMockup></CreateMockup> */}
+      {/* <ReadImg></ReadImg> */}
+      {/* <FormEvent></FormEvent> */}
+      <DragDrop></DragDrop>
+      {/* <ReadAsText></ReadAsText> */}
     </>
   );
 }
