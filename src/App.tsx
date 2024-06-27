@@ -77,6 +77,11 @@ import ReadImg from "./ReadImg/ReadImg.tsx";
 import FormEvent from "./FormEvent/FormEvent.tsx";
 import DragDrop from "./DragDrop/DragDrop.tsx";
 import ReadAsText from "./ReadAsText/ReadAsText.tsx";
+import CheckboxGroupComponent from "./Checkbox/Checkbox.tsx";
+import Increment from "./Redux2/Increment.tsx";
+import Users from "./Redux2/Users.tsx";
+import TestTailwind from "./TestTailwind/TestTailwind.tsx";
+import TabsBar from "./Tabs/Tabs.tsx";
 
 const allImg = [
   img1,
@@ -260,8 +265,13 @@ function App() {
       {/* <CreateMockup></CreateMockup> */}
       {/* <ReadImg></ReadImg> */}
       {/* <FormEvent></FormEvent> */}
-      <DragDrop></DragDrop>
+      {/* <DragDrop></DragDrop> */}
+      {/* <CheckboxGroupComponent /> */}
       {/* <ReadAsText></ReadAsText> */}
+      <Increment />
+      <Users />
+      {/* <TestTailwind /> */}
+      <TabsBar />
     </>
   );
 }
