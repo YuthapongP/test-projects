@@ -1,25 +1,27 @@
 import React from "react";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
+import Users from "../Redux2/Users";
+import Increment from "../Redux2/Increment";
+
+const toRenderComponents = {
+  userComponent: Users,
+  counterComponent: Increment,
+};
 
 const TabsBar = () => {
   return (
-    <Tabs variant={"colorful"}>
+    <Tabs>
       <TabList>
-        <Tab>One</Tab>
-        <Tab>Two</Tab>
-        <Tab>Three</Tab>
+        {Object.keys(toRenderComponents).map((title) => (
+          <Tab>{title}</Tab>
+        ))}
       </TabList>
-
       <TabPanels>
-        <TabPanel>
-          <p>one!</p>
-        </TabPanel>
-        <TabPanel>
-          <p>two!</p>
-        </TabPanel>
-        <TabPanel>
-          <p>three!</p>
-        </TabPanel>
+        {Object.values(toRenderComponents).map((Component: React.FC) => (
+          <TabPanel>
+            <Component />
+          </TabPanel>
+        ))}
       </TabPanels>
     </Tabs>
   );

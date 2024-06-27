@@ -268,8 +268,8 @@ function App() {
       {/* <DragDrop></DragDrop> */}
       {/* <CheckboxGroupComponent /> */}
       {/* <ReadAsText></ReadAsText> */}
-      <Increment />
-      <Users />
+      {/* <Increment /> */}
+      {/* <Users /> */}
       {/* <TestTailwind /> */}
       <TabsBar />
     </>

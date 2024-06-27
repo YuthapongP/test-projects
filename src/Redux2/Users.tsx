@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { addUsers } from "./userSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { List, ListItem } from "@chakra-ui/react";
 
 export default function Users() {
   const [newUser, setNewUser] = useState<string>(""); // Initialize with empty string
@@ -20,7 +21,7 @@ export default function Users() {
   return (
     <div>
       <form onSubmit={handeAddUsers}>
-        <label htmlFor="user">Add User:</label>
+        <label htmlFor="user">Add User: </label>
         <input
           type="text"
           id="user"
@@ -29,12 +30,14 @@ export default function Users() {
         />
         <button type="submit">Add</button>
       </form>
-      <ul>
-        Users:
-        {users?.users?.map((user: any) => (
-          <li key={user?.name}>{user.name}</li>
+      <List spacing={3} stylePosition="inside">
+        <ListItem fontWeight="bold">Users:</ListItem>
+        {users?.users?.map((user, idx) => (
+          <ListItem key={user.name}>
+            {idx + 1} - {user.name}
+          </ListItem>
         ))}
-      </ul>
+      </List>
     </div>
   );
 }
