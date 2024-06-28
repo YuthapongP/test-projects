@@ -82,6 +82,7 @@ import Increment from "./Redux2/Increment.tsx";
 import Users from "./Redux2/Users.tsx";
 import TestTailwind from "./TestTailwind/TestTailwind.tsx";
 import TabsBar from "./Tabs/Tabs.tsx";
+import Globe from "./Globe/Globe.tsx";
 
 const allImg = [
   img1,
@@ -271,7 +272,8 @@ function App() {
       {/* <Increment /> */}
       {/* <Users /> */}
       {/* <TestTailwind /> */}
-      <TabsBar />
+      {/* <TabsBar /> */}
+      <Globe />
     </>
   );
 }
