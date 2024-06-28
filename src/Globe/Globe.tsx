@@ -7,7 +7,7 @@ function Globe() {
 
   useEffect(() => {
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000); // Start with aspect ratio 1
+    const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000); // Start with aspect ratio 1
     const renderer = new THREE.WebGLRenderer({
       canvas: canvasRef.current,
       antialias: true, // Enable antialiasing for smoother edges
@@ -23,11 +23,9 @@ function Globe() {
         const sphere = new THREE.Mesh(geometry, material);
         scene.add(sphere);
 
-        // Add some ambient light
         const ambientLight = new THREE.AmbientLight(0x808080);
         scene.add(ambientLight);
 
-        // Add a directional light for highlights
         const directionalLight1 = new THREE.DirectionalLight(0xffffff, 0.5);
         directionalLight1.position.set(5, 3, 5);
 
@@ -38,10 +36,10 @@ function Globe() {
 
         camera.position.z = 5;
 
-        // Handle window resize
         const handleResize = () => {
-          const width = canvasRef.current.clientWidth;
-          const height = canvasRef.current.clientHeight;
+          const width = canvasRef?.current?.clientWidth;
+          const height = canvasRef?.current?.clientHeight;
+          console.log(width, height);
           camera.aspect = width / height;
           camera.updateProjectionMatrix();
           renderer.setSize(width, height);
@@ -55,7 +53,7 @@ function Globe() {
           renderer.render(scene, camera);
         };
 
-        handleResize(); // Initial resize
+        handleResize();
         animate();
       },
       undefined,
@@ -63,7 +61,7 @@ function Globe() {
         console.error("Error loading texture:", error);
       }
     );
-  }, []); // Empty dependency array
+  }, []);
 
   return <canvas ref={canvasRef} style={{ width: "100%", height: "100%" }} />;
 }

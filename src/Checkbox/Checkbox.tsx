@@ -33,6 +33,14 @@ const CheckboxGroupComponent = () => {
         />
         Option 3
       </label>
+      <label>
+        <input
+          type="checkbox"
+          value="option4"
+          {...getCheckboxProps({ disabled: isDisabled })}
+        />
+        Option 4
+      </label>
       <div>Selected values: {value.join(", ")}</div>
     </div>
   );

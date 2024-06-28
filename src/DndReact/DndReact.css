@@ -1,0 +1,22 @@
+.dnd-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dnd-item {
+    padding: 8px;
+    margin: 4px 0;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+  }
+
+  .dnd-box {
+    width: 200px;
+    padding: 1rem;
+    gap: 2px;
+    border: white 2px solid;
+    background-color: hotpink;
+  }
+
+  

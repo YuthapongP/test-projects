@@ -83,6 +83,7 @@ import Users from "./Redux2/Users.tsx";
 import TestTailwind from "./TestTailwind/TestTailwind.tsx";
 import TabsBar from "./Tabs/Tabs.tsx";
 import Globe from "./Globe/Globe.tsx";
+import DndReact from "./DndReact/DndReact.tsx";
 
 const allImg = [
   img1,
@@ -273,7 +274,8 @@ function App() {
       {/* <Users /> */}
       {/* <TestTailwind /> */}
       {/* <TabsBar /> */}
-      <Globe />
+      {/* <Globe /> */}
+      {/* <DndReact /> */}
     </>
   );
 }
