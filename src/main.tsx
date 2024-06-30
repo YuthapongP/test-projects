@@ -20,17 +20,17 @@ const rootElement = document.getElementById("root");
 
 if (rootElement) {
   createRoot(rootElement).render(
-    <React.StrictMode>
-      <Provider store={store}>
-        <ChakraProvider theme={theme}>
-          <ModalProvider>
-            {/* <ChakraProvider> */}
-            <App />
-            {/* </ChakraProvider> */}
-          </ModalProvider>
-        </ChakraProvider>
-      </Provider>
-    </React.StrictMode>
+    // <React.StrictMode>
+    <Provider store={store}>
+      <ChakraProvider theme={theme}>
+        <ModalProvider>
+          {/* <ChakraProvider> */}
+          <App />
+          {/* </ChakraProvider> */}
+        </ModalProvider>
+      </ChakraProvider>
+    </Provider>
+    // </React.StrictMode>
   );
 } else {
   console.log("error");

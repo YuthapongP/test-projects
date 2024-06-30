@@ -84,6 +84,7 @@ import TestTailwind from "./TestTailwind/TestTailwind.tsx";
 import TabsBar from "./Tabs/Tabs.tsx";
 import Globe from "./Globe/Globe.tsx";
 import DndReact from "./DndReact/DndReact.tsx";
+import CredentialLogin from "./CredentialLogin.tsx/index.tsx";
 
 const allImg = [
   img1,
@@ -275,7 +276,8 @@ function App() {
       {/* <TestTailwind /> */}
       {/* <TabsBar /> */}
       {/* <Globe /> */}
-      {/* <DndReact /> */}
+      <DndReact />
+      {/* <CredentialLogin /> */}
     </>
   );
 }

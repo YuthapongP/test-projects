@@ -3,43 +3,47 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import "./DndReact.css";
 
 function DndReact() {
-  const [items, setItems] = useState(["Item 1", "Item 2", "Item 3"]);
+  const [items, setItems] = useState([
+    { id: "1", content: "Item 1" },
+    { id: "2", content: "Item 2" },
+    { id: "3", content: "Item 3" },
+  ]);
 
   function handleOnDragEnd(result) {
-    if (!result.destination) return;
+    if (!result.destination) return; // Dropped outside the list
 
-    const newItems = Array.from(items);
-    const [removed] = newItems.splice(result.source.index, 1);
-    newItems.splice(result.destination.index, 0, removed);
+    const updatedItems = Array.from(items);
+    const [reorderedItem] = updatedItems.splice(result.source.index, 1);
+    updatedItems.splice(result.destination.index, 0, reorderedItem);
 
-    setItems(newItems);
+    setItems(updatedItems);
   }
 
   return (
     <DragDropContext onDragEnd={handleOnDragEnd}>
-      <Droppable droppableId="droppable">
+      <Droppable droppableId="characters">
         {(provided) => (
-          <div
+          <ul
+            className="dnd-container"
             {...provided.droppableProps}
             ref={provided.innerRef}
-            className="dnd-container"
           >
             {items.map((item, index) => (
-              <Draggable key={item} draggableId={item} index={index}>
+              <Draggable key={item.id} draggableId={item.id} index={index}>
                 {(provided) => (
-                  <div
+                  <li
                     ref={provided.innerRef}
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                     className="dnd-box"
                   >
-                    {item}
-                  </div>
+                    {item.content}
+                  </li>
                 )}
               </Draggable>
             ))}
             {provided.placeholder}
-          </div>
+          </ul>
         )}
       </Droppable>
     </DragDropContext>
