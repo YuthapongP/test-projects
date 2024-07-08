@@ -9,6 +9,8 @@ import { Provider } from "react-redux";
 import { store } from "./Redux2/useStore.ts";
 import "./index.css";
 import theme from "./Tabs/chakraTabsStyles/theme.ts";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 
 // ReactDOM.createRoot(document.getElementById("root")!).render(
 //   <React.StrictMode>
@@ -23,11 +25,13 @@ if (rootElement) {
     // <React.StrictMode>
     <Provider store={store}>
       <ChakraProvider theme={theme}>
-        <ModalProvider>
-          {/* <ChakraProvider> */}
-          <App />
-          {/* </ChakraProvider> */}
-        </ModalProvider>
+        <DndProvider backend={HTML5Backend}>
+          <ModalProvider>
+            {/* <ChakraProvider> */}
+            <App />
+            {/* </ChakraProvider> */}
+          </ModalProvider>
+        </DndProvider>
       </ChakraProvider>
     </Provider>
     // </React.StrictMode>

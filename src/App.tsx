@@ -85,6 +85,10 @@ import TabsBar from "./Tabs/Tabs.tsx";
 import Globe from "./Globe/Globe.tsx";
 import DndReact from "./DndReact/DndReact.tsx";
 import CredentialLogin from "./CredentialLogin.tsx/index.tsx";
+import BoxContainer from "./SprintToDo/BoxContainer";
+import DndContainer from "./SprintToDo/DndContainer";
+import FileUploader from "./DragDrop/DragDrop.tsx";
+import GetUserMedia from "./hooks/useGetUserMedia";
 
 const allImg = [
   img1,
@@ -123,7 +127,7 @@ function App() {
   // Example usage:
   const stringWithAccents = "cliché café mañana"; // Input string with accents
   const stringWithoutAccents = removeAccents(stringWithAccents);
-  console.log(stringWithoutAccents);
+  // console.log(stringWithoutAccents);
   // const ref = useRef<HTMLInputElement>(null);
   // const [data, setData] = useState<string>("");
   // const [newData, setNewData] = useState<string>("");
@@ -276,8 +280,12 @@ function App() {
       {/* <TestTailwind /> */}
       {/* <TabsBar /> */}
       {/* <Globe /> */}
-      <DndReact />
+      {/* <DndReact /> */}
+      {/* <BoxContainer /> */}
+      {/* <DndContainer /> */}
       {/* <CredentialLogin /> */}
+      {/* <FileUploader /> */}
+      <GetUserMedia />
     </>
   );
 }

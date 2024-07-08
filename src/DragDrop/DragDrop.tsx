@@ -84,8 +84,8 @@ const FileUploader = () => {
     event.stopPropagation();
     const img = new Image();
 
-    img.width = 50; // Set the width of the custom image
-    img.height = 50;
+    img.width = 10; // Set the width of the custom image
+    img.height = 10;
 
     img.src = "../src/assets/catFoot.png";
 
