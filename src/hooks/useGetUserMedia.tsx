@@ -42,13 +42,15 @@ export default function GetUserMedia() {
       let canvasHeight;
       let canvasWidth;
 
-      canvasRef.current.height = videoRef.current.videoWidth;
-      canvasHeight = canvasRef.current.height;
+      if (canvasRef.current) {
+        canvasRef.current.height = videoRef.current.videoWidth;
+        canvasHeight = canvasRef.current.height;
 
-      canvasRef.current.width = videoRef.current.videoHeight;
-      canvasWidth = canvasRef.current.width;
+        canvasRef.current.width = videoRef.current.videoHeight;
+        canvasWidth = canvasRef.current.width;
 
-      context.drawImage(videoRef.current, 0, 0, canvasHeight, canvasWidth);
+        context.drawImage(videoRef.current, 0, 0, canvasHeight, canvasWidth);
+      }
 
       const dataURL =
         canvasRef.current && canvasRef.current.toDataURL("image/png");
