@@ -89,6 +89,7 @@ import BoxContainer from "./SprintToDo/BoxContainer";
 import DndContainer from "./SprintToDo/DndContainer";
 import FileUploader from "./DragDrop/DragDrop.tsx";
 import GetUserMedia from "./hooks/useGetUserMedia";
+import ImageCropper from "./ImageCropper";
 
 const allImg = [
   img1,
@@ -285,7 +286,8 @@ function App() {
       {/* <DndContainer /> */}
       {/* <CredentialLogin /> */}
       {/* <FileUploader /> */}
-      <GetUserMedia />
+      {/* <GetUserMedia /> */}
+      <ImageCropper />
     </>
   );
 }
