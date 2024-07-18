@@ -1,0 +1,26 @@
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip-target {
+    cursor: pointer;
+  }
+  
+  .tooltip-content {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  
+  .tooltip-text {
+    /* Additional styling for the tooltip content if needed */
+  }
+  

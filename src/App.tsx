@@ -92,6 +92,7 @@ import GetUserMedia from "./hooks/useGetUserMedia";
 import ImageCropper from "./ImageCropper";
 import TableComponent from "./Table/TableComponent";
 import CustomTable from "./Table/CustomTable";
+import ToolTip from "./ToolTip/ToolTip";
 
 const allImg = [
   img1,
@@ -290,8 +291,11 @@ function App() {
       {/* <FileUploader /> */}
       {/* <GetUserMedia /> */}
       {/* <ImageCropper /> */}
-      <TableComponent columns={undefined} data={undefined} />
-      <CustomTable></CustomTable>
+      {/* <TableComponent columns={undefined} data={undefined} /> */}
+      {/* <CustomTable></CustomTable> */}
+      <ToolTip content="hello welcome">
+        <button>hover over me</button>
+      </ToolTip>
     </>
   );
 }
