@@ -93,6 +93,7 @@ import ImageCropper from "./ImageCropper";
 import TableComponent from "./Table/TableComponent";
 import CustomTable from "./Table/CustomTable";
 import ToolTip from "./ToolTip/ToolTip";
+import CustomPortal, { PortalContentRef } from "./Portal/CustomPortal";
 
 const allImg = [
   img1,
@@ -121,12 +122,23 @@ function App() {
   console.log(clientHeight, "clientHeight");
   console.log("scrollTop", scrollTop);
   console.log("scrollPosition", scrollPosition);
+  const portalContentRef = useRef<PortalContentRef>(null);
 
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  // const [isOpen, setIsOpen] = useState<boolean>(true);
 
   function removeAccents(str) {
     return _.deburr(str);
   }
+
+  const handleTogglePortal = () => {
+    // Example function to toggle the portal open/close
+    // This could be managed by state or any other logic in your app
+    if (portalContentRef.current) {
+      // Access methods or properties on PortalContent through ref
+
+      portalContentRef.current.togglePortal(); // Example: Call closePortal method
+    }
+  };
 
   // Example usage:
   const stringWithAccents = "cliché café mañana"; // Input string with accents
@@ -293,9 +305,11 @@ function App() {
       {/* <ImageCropper /> */}
       {/* <TableComponent columns={undefined} data={undefined} /> */}
       {/* <CustomTable></CustomTable> */}
-      <ToolTip content="hello welcome">
+      {/* <ToolTip content="hello welcome">
         <button>hover over me</button>
-      </ToolTip>
+      </ToolTip> */}
+      <button onClick={handleTogglePortal}>Open Portal</button>
+      <CustomPortal content="hello world" ref={portalContentRef}></CustomPortal>
     </>
   );
 }

@@ -50,7 +50,7 @@ const ToolTip: React.FC<NonNullable<ToolTipProps>> & {
 ToolTip.displayName = "ToolTip";
 
 interface ToolTipContentProps {
-  children: React.ReactNode;
+  children: React.ReactNode | string;
 }
 
 const Content: React.FC<NonNullable<ToolTipContentProps>> = ({ children }) => {
