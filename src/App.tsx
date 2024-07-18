@@ -90,6 +90,7 @@ import DndContainer from "./SprintToDo/DndContainer";
 import FileUploader from "./DragDrop/DragDrop.tsx";
 import GetUserMedia from "./hooks/useGetUserMedia";
 import ImageCropper from "./ImageCropper";
+import TableComponent from "./Table/TableComponent";
 
 const allImg = [
   img1,
@@ -287,7 +288,8 @@ function App() {
       {/* <CredentialLogin /> */}
       {/* <FileUploader /> */}
       {/* <GetUserMedia /> */}
-      <ImageCropper />
+      {/* <ImageCropper /> */}
+      <TableComponent columns={undefined} data={undefined} />
     </>
   );
 }
