@@ -91,6 +91,7 @@ import FileUploader from "./DragDrop/DragDrop.tsx";
 import GetUserMedia from "./hooks/useGetUserMedia";
 import ImageCropper from "./ImageCropper";
 import TableComponent from "./Table/TableComponent";
+import CustomTable from "./Table/CustomTable";
 
 const allImg = [
   img1,
@@ -290,6 +291,7 @@ function App() {
       {/* <GetUserMedia /> */}
       {/* <ImageCropper /> */}
       <TableComponent columns={undefined} data={undefined} />
+      <CustomTable></CustomTable>
     </>
   );
 }

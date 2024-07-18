@@ -5,12 +5,11 @@ const mockColumn = [
   { Header: "ID", accessor: "id" },
   { Header: "Name", accessor: "name" },
   { Header: "Age", accessor: "age" },
-];
+] as const;
 
 const mockData = [
   { id: 1, name: "John Doe", age: 30 },
   { id: 2, name: "Jane Smith", age: 25 },
-  // more data...
 ];
 
 function TableComponent({ columns = mockColumn, data = mockData }) {
